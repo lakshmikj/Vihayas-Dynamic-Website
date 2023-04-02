@@ -1,0 +1,21 @@
+<section>
+    <div class="container mt-5">
+        <div class="row">
+            {{#each products}}
+            <div class="col-md-3 p-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="/product-images/{{this.product._id}}.jpg" class="card-img-top" alt="card-image" style="height:20rem;width: 9rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.product.Name}}</h5>
+                        <p class="card-text">{{this.product.Description}}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">{{this.product.Price}}</li>
+                        <li class="list-group-item">{{this.quantity}}</li>
+                    </ul>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>

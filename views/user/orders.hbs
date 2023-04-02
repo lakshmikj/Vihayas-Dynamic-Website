@@ -1,0 +1,36 @@
+<section>
+    <div class="container">
+        <div class="row mt-4">
+            <a href="/admin/add-product" class="btn btn-success">Add Products</a>
+        </div>
+        <table class="table mt-5">
+            <thead>
+                <tr>
+                    <th scope="col">Date</th>
+                    <th>Address</th>
+                    <th>pincode</th>
+                    <th>Mobile</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Payment</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <body>
+                {{#each orders}}
+                <tr>
+                    <td>{{this.date}}</td>
+                    <td>{{this.deliveryDetails.address}}</td>
+                    <td>{{this.deliveryDetails.pincode}}</td>
+                    <td>{{this.deliveryDetails.mobile}}</td>
+                    <td>{{this.totalAmount}}</td>
+                    <td>{{this.paymentMethode}}</td>
+                    <td>{{this.status}}</td>
+                    <td>
+                        <a href="/view-ordered-products/{{this._id}}" class="btn btn-primary">View Products</a>
+                    </td>
+                </tr>
+                {{/each}}
+            </body>
+        </table>
+    </div>
+</section>

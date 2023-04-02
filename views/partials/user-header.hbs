@@ -1,0 +1,54 @@
+<header style="z-index: 1;width: 100%;">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:cornflowerblue;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="https://us.123rf.com/450wm/pixbold/pixbold2109/pixbold210900407/174780871-v-letter-initial-luxurious-logo-template-v-logo-golden-concept-v-letter-logo-with-golden-luxury.jpg?ver=6" alt="" width="30" height="24" class="d-inline-block align-text-top"> Shopping Cart-User</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/cart">Cart<span class="badge bg-success" id="cart-count">{{cartCount}}</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Catogery
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/categoryKurta">Kurtas</a></li>
+            <li><a class="dropdown-item" href="/categoryDress">Dress</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/categoryKids">Kids-Wear</a></li>
+          </ul>
+        </li>
+        {{#if user}}
+        <li class="nav-item">
+          <a class="nav-link" href="/orders">Orders</a>
+        </li>
+        {{/if}}
+      </ul>
+      <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    {{#if user}}
+      {{user.Name}}
+      {{else}}
+      Account
+    {{/if}}
+    
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    {{#if user}}
+    <li><a class="dropdown-item" href="/logout">LogOut</a></li>
+    {{else}}
+    <li><a class="dropdown-item" href="/login">LogIn</a></li>
+    {{/if}}
+  </ul>
+</div>
+    </div>
+  </div>
+</nav>
+</header>
+

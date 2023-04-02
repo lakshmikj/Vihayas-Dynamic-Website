@@ -1,0 +1,31 @@
+<div class="row bg-primary" style="height: 600px;">
+    <img src="/images/sky2.jpeg" width="100%" style="
+    height:600px;
+    width:100%;
+    position: absolute;
+    padding-left:35px;"
+    
+    >
+    <div class="col-md-6 m-auto" style="position: relative;">
+        <div class="container mt-5">
+            <h2 class="text-center">User Login</h2>
+            <form action="/login" method="POST">
+            {{#if LoginErr}}
+            <p class="erorr">Invalid Username or Password</p>
+            {{/if}}
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="email" class="form-control" name="Email" placeholder="Enter email..">
+                </div>
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" name="Password"  class="form-control" placeholder="Password">
+                </div>
+                <br>
+                <a href="/signup" style="color:black">Create new account ?</a>
+                <button type="submit" class="btn btn-primary  float-end">Login</button>
+            </form>
+
+        </div>
+    </div>
+</div>
